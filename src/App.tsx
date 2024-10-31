@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AmityUiKitProvider, AmityUiKitSocial } from "@amityco/ui-kit";
+import { useEffect, useState } from "react";
 
-function App() {
+export default function App() {
+  const [apiKey, setApiKey] = useState("");
+  const [userId, setUserId] = useState("");
+  const [displayName, setDisplayName] = useState("");
+  const [apiRegion, setApiRegion] = useState("");
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+
+    setApiKey(queryParams.get("apiKey") || "b0eaba093fdbf1361f36d849000b4289d80e8ae3b8636d29");
+    setUserId(queryParams.get("userId") || "topAmity");
+    setDisplayName(queryParams.get("displayName") || "topAmity");
+    setApiRegion(queryParams.get("apiRegion") || "us");
+  }, []);
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      {apiKey ?
+        <AmityUiKitProvider
+          key={userId}
+          apiKey={apiKey}
+          userId={userId}
+          displayName={displayName}
+          apiRegion={apiRegion}
         >
-          Learn React
-        </a>
-      </header>
+          <AmityUiKitSocial />
+        </AmityUiKitProvider>
+        : <div />
+      }
     </div>
+
   );
 }
-
-export default App;
