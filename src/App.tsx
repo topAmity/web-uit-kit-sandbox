@@ -1,5 +1,7 @@
-import { AmityUiKitProvider, AmityUiKitSocial } from "@amityco/ui-kit";
+import { AmityUiKitProvider, AmityUiKitSocial } from "@amityco/ui-kit-open-source";
+
 import { useEffect, useState } from "react";
+import '@amityco/ui-kit-open-source/dist/index.css'
 
 export default function App() {
   const [apiKey, setApiKey] = useState("");
@@ -10,11 +12,16 @@ export default function App() {
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
 
-    setApiKey(queryParams.get("apiKey") || "b0eaba093fdbf1361f36d849000b4289d80e8ae3b8636d29");
-    setUserId(queryParams.get("userId") || "topAmity");
-    setDisplayName(queryParams.get("displayName") || "topAmity");
+    setApiKey(queryParams.get("apiKey") || "b0ebeb5939def76019308d4a530b12ddd558dde5bf346e2e");
+    setUserId(queryParams.get("userId") || "user1");
+    setDisplayName(queryParams.get("displayName") || "user1");
     setApiRegion(queryParams.get("apiRegion") || "us");
   }, []);
+  const theme = {
+    palette: {
+      primary: '#FF0000',
+    }
+  }
 
   return (
 
@@ -24,8 +31,9 @@ export default function App() {
           key={userId}
           apiKey={apiKey}
           userId={userId}
-          displayName={displayName}
+          displayName={displayName} // pass the updated displayName
           apiRegion={apiRegion}
+          theme={theme}
         >
           <AmityUiKitSocial />
         </AmityUiKitProvider>
