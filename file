@@ -1,0 +1,290 @@
+curl --location --request PUT 'https://apix.us.amity.co/api/v2/post-moderation/settings' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer 21654e9894f916f834772f21c74adeaedc196221' \
+--data '{
+    "confidences": [
+        {
+            "category": "Air Crash",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Alcohol",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Alcoholic Beverages",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Barechested Male",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Blood & Gore",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Corpses",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Drinking",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Drug Products",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Drugs & Tobacco",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Drugs & Tobacco Paraphernalia & Use",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Emaciated Bodies",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Explicit Nudity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Explicit Sexual Activity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Explosions and Blasts",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Exposed Female Genitalia",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Exposed Male Genitalia",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Exposed Male Nipple",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Extremist",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Female Swimwear or Underwear",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Gambling",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Graphic Female Nudity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Graphic Male Nudity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Hate",
+            "flagConfidence": 1,
+            "blockConfidence": 7,
+            "moderationType": "text"
+        },
+        {
+            "category": "Hate Symbols",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Illustrated Explicit Nudity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Implied Nudity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Kissing on the Lips",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Male Swimwear or Underwear",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Middle Finger",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Nazi Party",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Non-Explicit Nudity of Intimate parts and Kissing",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Physical Violence",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Pills",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Rude Gestures",
+           "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Self-Harm",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "SelfHarm",
+            "flagConfidence": 2,
+            "blockConfidence": 7,
+            "moderationType": "text"
+        },
+        {
+            "category": "Sex Toys",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Sexual",
+            "flagConfidence": 1,
+            "blockConfidence": 7,
+            "moderationType": "text"
+        },
+        {
+            "category": "Sexual Activity",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Smoking",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Swimwear or Underwear",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Violence",
+            "flagConfidence": 20,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "ViolenceText",
+            "flagConfidence": 2,
+            "blockConfidence": 7,
+            "moderationType": "text"
+        },
+        {
+            "category": "Visually Disturbing",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Weapon Violence",
+            "flagConfidence": 20,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "Weapons",
+            "flagConfidence": 20,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        },
+        {
+            "category": "White Supremacy",
+            "flagConfidence": 40,
+            "blockConfidence": 100,
+            "moderationType": "media"
+        }
+    ]
+}
+'

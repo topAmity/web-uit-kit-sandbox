@@ -1,13 +1,18 @@
-import { AmityUiKitProvider, AmityUiKitSocial } from "@amityco/ui-kit-open-source";
+import { AmityUiKitProvider, AmityUiKitSocial, AmityUiKitChat } from "@amityco/ui-kit-open-source";
+import '@amityco/ui-kit-open-source/dist/index.css'
+import config from "./uikit.config.json";
 
 import { useEffect, useState } from "react";
-import '@amityco/ui-kit-open-source/dist/index.css'
+import axios from "axios";
+
 
 export default function App() {
   const [apiKey, setApiKey] = useState("");
   const [userId, setUserId] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [apiRegion, setApiRegion] = useState("");
+  const [uikitConfig, setUikitConfig] = useState(config)
+
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -17,11 +22,44 @@ export default function App() {
     setDisplayName(queryParams.get("displayName") || "user1");
     setApiRegion(queryParams.get("apiRegion") || "us");
   }, []);
-  const theme = {
-    palette: {
-      primary: '#FF0000',
+
+  const generateUUID = () => {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+      /[xy]/g,
+      function (c) {
+        const r = (Math.random() * 16) | 0;
+        const v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+      }
+    );
+  };
+
+  async function getCustomizationConfig(adminToken: string, region: string) {
+    console.log('region: ', region);
+    console.log('adminToken: ', adminToken);
+
+    const options = {
+      method: 'GET',
+      url: `https://apix.${region}.amity.co/api/v3/network-settings/uikit`,
+      headers: {
+        'Authorization': `Bearer ${adminToken}`,
+        'X-No-Cache': generateUUID()
+      }
+    };
+
+    try {
+      const { data } = await axios.request(options);
+      setUikitConfig(data.config)
+
+      return data;
+    } catch (error) {
+      console.error(error);
     }
   }
+  useEffect(() => {
+    getCustomizationConfig('a8c76344da66fae3eb3d72335ff76c769f0b4aaf', 'sg')
+  }, [])
+
 
   return (
 
@@ -33,9 +71,20 @@ export default function App() {
           userId={userId}
           displayName={displayName} // pass the updated displayName
           apiRegion={apiRegion}
-          theme={theme}
+          configs={uikitConfig as any}
         >
-          <AmityUiKitSocial />
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100vw",
+              height: "100dvh",
+            }}
+          >
+            <AmityUiKitSocial />
+          </div>
+
         </AmityUiKitProvider>
         : <div />
       }
