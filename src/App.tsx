@@ -1,5 +1,5 @@
-import { AmityUiKitProvider, AmityUiKitSocial, AmityUiKitChat } from "@amityco/ui-kit-open-source";
-import '@amityco/ui-kit-open-source/dist/index.css'
+import { AmityUiKitProvider, AmityUiKitSocial, AmityUiKitChat } from "@amityco/ui-kit";
+import '@amityco/ui-kit/dist/index.css'
 import config from "./uikit.config.json";
 
 import { useEffect, useState } from "react";
