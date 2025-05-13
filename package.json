@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@amityco/ui-kit": "file:amityco-ui-kit-4.4.2.tgz",
+    "@amityco/ui-kit": "^4.8.0",
     "@emotion/is-prop-valid": "^1.3.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
