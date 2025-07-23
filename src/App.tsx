@@ -72,6 +72,7 @@ export default function App() {
           displayName={displayName} // pass the updated displayName
           apiRegion={apiRegion}
           configs={uikitConfig as any}
+          syncNetworkConfig
         >
           <div
             style={{
