@@ -1,4 +1,4 @@
-import { AmityUiKitProvider, AmityUiKitSocial, AmityUiKitChat } from "@amityco/ui-kit";
+import { AmityUiKitProvider, AmityUiKitSocial, AmityUiKitChat, AmityLiveChatPage } from "@amityco/ui-kit";
 import '@amityco/ui-kit/dist/index.css'
 import config from "./uikit.config.json";
 
@@ -17,10 +17,10 @@ export default function App() {
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
 
-    setApiKey(queryParams.get("apiKey") || "b0ebeb5939def76019308d4a530b12ddd558dde5bf346e2e");
-    setUserId(queryParams.get("userId") || "user1");
-    setDisplayName(queryParams.get("displayName") || "user1");
-    setApiRegion(queryParams.get("apiRegion") || "us");
+    setApiKey(queryParams.get("apiKey") || "b3babb0b3a89f4341d31dc1a01091edcd70f8de7b23d697f");
+    setUserId(queryParams.get("userId") || "topAmity3");
+    setDisplayName(queryParams.get("displayName") || "topAmity3");
+    setApiRegion(queryParams.get("apiRegion") || "sg");
   }, []);
 
   const generateUUID = () => {
@@ -83,7 +83,7 @@ export default function App() {
               height: "100dvh",
             }}
           >
-            <AmityUiKitSocial />
+             <AmityLiveChatPage channelId={'68353a5a9e040ac91476b2f4'}/>
           </div>
 
         </AmityUiKitProvider>
