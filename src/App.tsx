@@ -83,7 +83,7 @@ export default function App() {
               height: "100dvh",
             }}
           >
-             <AmityLiveChatPage channelId={'68353a5a9e040ac91476b2f4'}/>
+            <AmityUiKitSocial/>
           </div>
 
         </AmityUiKitProvider>
