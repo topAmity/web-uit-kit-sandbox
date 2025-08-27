@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@amityco/ts-sdk@^7.8.4":
-  version "7.8.4"
-  resolved "https://registry.yarnpkg.com/@amityco/ts-sdk/-/ts-sdk-7.8.4.tgz#190afb8ad881e441cf92077e74b5bfdaea8d1003"
-  integrity sha512-G91pC6pCXf4/ZT4rdoxsAvgqv7luTw/Y15TIF3BGTPb323s/g9mUkoO2maZ683okPlBqUetDQo1CZDecPpp7Yg==
+"@amityco/ts-sdk@^7.8.6":
+  version "7.8.6"
+  resolved "https://registry.yarnpkg.com/@amityco/ts-sdk/-/ts-sdk-7.8.6.tgz#293a1c59866ce273c419c46aea6104c9e1790fa1"
+  integrity sha512-1ZSEuvHP4pI9VDvnIlinbP3ZJAZ7P7GoHsT+bXRuQ2XqYtD3uw/P0TJMNENReksQPlNItOkmkfiMUfCmkeu6Mw==
   dependencies:
     agentkeepalive "^4.2.1"
     axios "^1.2.3"
@@ -28,10 +28,10 @@
     object-hash "^3.0.0"
     react-native-uuid "^2.0.1"
 
-"@amityco/ui-kit@^4.11.1":
-  version "4.11.1"
-  resolved "https://registry.yarnpkg.com/@amityco/ui-kit/-/ui-kit-4.11.1.tgz#7a91596b13fb59b1590a8db9a7a9b6b2774fe969"
-  integrity sha512-a4YhxrK+dkVk4TGTy+NurfztrYXQw4akBoGmIa6nuljSJgQdx/hSFVzWYmbdZRSx+cCi18hSP/KhjlhR/3BMSw==
+"@amityco/ui-kit@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@amityco/ui-kit/-/ui-kit-4.11.3.tgz#212a5677b8465a2ba90c4361d66c678f0a2d0ab2"
+  integrity sha512-p4GjxAJiq4YZ15Yhs+RKFtk7jLJ9ZiLM2dChpN4S3SfAp1YOCu5xKdrdQe9v9agY2/ia0VXIvn8djHVtnKZ2QA==
   dependencies:
     "@hookform/error-message" "^2.0.1"
     "@hookform/resolvers" "^3.3.4"
